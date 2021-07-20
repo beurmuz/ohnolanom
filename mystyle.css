@@ -1,3 +1,28 @@
-body {
-	
+h1 {
+	font-size: 70px;
+	text-align: center;
+	width: 100%;
+	font-family: 'Permanent Marker', cursive;
+}
+
+.boxes {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 300px;
+	grid-gap: 10px;
+	text-align: center;
+	font-family: 'Gaegu', cursive;
+	font-size: 30px;
+}
+
+.game1 {
+	background-color: pink;
+}
+
+.game2 {
+	background-color: beige;
+}
+
+.game3 {
+	background-color:powderblue;
 }
