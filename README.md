@@ -1,2 +1,0 @@
-# ohnolanom
-web game site 
