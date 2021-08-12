@@ -14,18 +14,18 @@ $start.addEventListener('click', () => { // 시작 버튼을 누를 때 작동�
   if (started) return; // 이미 시작했으면 무시 
   started = true;
   console.log('시작');
-//   const timerId = setInterval(() => {
-//     time = (time * 10 - 1) / 10; // 소수점 계산 시 문제있음
-//     $timer.textContent = time;
-//     if (time === 0) {
-//       clearInterval(timerId);
-//       clearInterval(tickId);
-//       setTimeout(() => {
-//         alert(`게임 오버! 점수는${score}점`);
-//       }, 50);
-//     }
-//   }, 100);
-//   const tickId = setInterval(tick, 1000);
+  const timerId = setInterval(() => {
+    time = (time * 10 - 1) / 10; // 소수점 계산 시 문제있음
+    $timer.textContent = time;
+    if (time === 0) {
+      clearInterval(timerId);
+      clearInterval(tickId);
+      setTimeout(() => {
+        alert(`게임 오버! 점수는${score}점`);
+      }, 50);
+    }
+  }, 100);
+  const tickId = setInterval(tick, 1000);
   tick();
 });
 
