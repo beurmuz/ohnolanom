@@ -70,7 +70,7 @@ function moveCells(direction) {
         const newData = [[], [], [], []]; // 1) 임시로 데이터를 저장할 newData 변수 선언하기 
         data.forEach((rowData, i) => { 
           rowData.forEach((cellData, j) => { // 2) 반복문을 돌면서 각 줄에 있는 숫자를 newData 배열의 각 줄 안에 넣기 
-            if (cellData) { // newData = [2, 2, 4] 
+            if (cellData) { // newData = [2, 2, 4, 8]
               const currentRow = newData[i] 
               const prevData = currentRow[currentRow.length - 1];
               if (prevData === cellData) { // 이전 값과 지금 값이 같으면
