@@ -8,12 +8,13 @@ const $$cells = document.querySelectorAll('.cell');
 const holes = [0, 0, 0, 0, 0, 0, 0, 0, 0]; // 구멍에 대한 정보를 담당할 배열 선언 
 let started = false;
 let score = 0;
-let time = 60;
+let time = 30;
 
 $start.addEventListener('click', () => { // 시작 버튼을 누를 때 작동할 이벤트 리스너 연결
   if (started) return; // 이미 시작했으면 무시 
   started = true;
   console.log('시작');
+
   const timerId = setInterval(() => {
     time = (time * 10 - 1) / 10; // 소수점 계산 시 문제있음
     $timer.textContent = time;
@@ -25,14 +26,16 @@ $start.addEventListener('click', () => { // 시작 버튼을 누를 때 작동�
       }, 50);
     }
   }, 100);
+
   const tickId = setInterval(tick, 1000);
   tick();
 });
 
 let oguPercent = 0.3;
-let bombPercent = 0.5;
+let bombPercent = 0.5; // 0.2
 
-function tick() {
+// tick()은 비어있는 칸에 오구나 폭탄을 보여주는 함수 
+function tick() { 
   holes.forEach((hole, index) => {
     if (hole) return; // 무언가 일어나고 있으면 return
     const randomValue = Math.random();
