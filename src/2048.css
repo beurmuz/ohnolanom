@@ -1,0 +1,27 @@
+#table {
+    border-collapse: collapse; user-select: none; /* 드래그를 막는 속성*/
+}
+
+#table td {
+    border: 10px solid #bbada0; 
+    width: 116px; 
+    height: 116px;
+    font-size: 50px; 
+    text-align: center;
+    font-weight: bold;
+}
+
+#score { 
+    user-select: none;
+}
+.color-2 { background-color: #eee4da; color: #776e65; }
+.color-4 { background-color: #eee1c9; color: #776e65; }
+.color-8 { background-color: #f3b27a;  }
+.color-16 { background-color: #f69664; }
+.color-32 { background-color: #f77c5f; }
+.color-64 { background-color: #f75f3b; }
+.color-128 { background-color: #edd073; }
+.color-256 { background-color: #edcc62; }
+.color-512 { background-color: #edc950; }
+.color-1024 { background-color: #dab439; }
+.color-2048 { background-color: #b8931a; }
