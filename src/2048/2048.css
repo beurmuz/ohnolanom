@@ -9,15 +9,21 @@ h1 {
 	font-family: 'Permanent Marker', cursive;
 }
 
+.allScripts {
+    display: grid;
+    place-items: center;
+    min-height: 70vh;
+}
+
 #table {
     border-collapse: collapse; user-select: none; /* 드래그를 막는 속성*/
 }
 
 #table td {
     border: 10px solid #bbada0; 
-    width: 116px; 
-    height: 116px;
-    font-size: 50px; 
+    width: 100px; 
+    height: 100px;
+    font-size: 45px; 
     text-align: center;
     font-weight: bold;
 }
