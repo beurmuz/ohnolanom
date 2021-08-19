@@ -9,6 +9,12 @@ h1 {
 	font-family: 'Permanent Marker', cursive;
 }
 
+.allScripts {
+  display: grid;
+  place-items: center;
+  min-height: 70vh;
+}
+
 button {
   width: 150px;
   background-color: beige;
