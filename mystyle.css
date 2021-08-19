@@ -1,47 +1,61 @@
+a { text-decoration: none; }
+a:link { color: black; }
+a:visited { color: black }
+
 h1 {
-	font-size: 70px;
+	font-size: 60px;
 	text-align: center;
 	width: 100%;
 	font-family: 'Permanent Marker', cursive;
 }
 
 .boxes {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 300px;
-	grid-gap: 10px;
-	text-align: center;
 	font-family: 'Gaegu', cursive;
 	font-size: 30px;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
 }
 
+.game1 {flex: 1; border-left: 5px solid white; border-right: 5px solid white;}
+.game2 {flex: 1; border-left: 5px solid white; border-right: 5px solid white;}
+.game3 {flex: 1; border-left: 5px solid white; border-right: 5px solid white;}
+.game {padding: 5px;}
+
+.GameName {	padding: 10px;}
+
 .png{
-	width: 300px;
+	padding: 10px;
+	width: 250px;
 	height: 250px;
 }
 
-.StartBtn {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 35px;
-	grid-gap: 10px;
-	text-align: center;
-	font-family: 'Gaegu', cursive;
-	font-size: 30px;
-}
-
-.game1 {
-	background-color: pink;
-}
-
-.game2 {
-	background-color: beige;
-}
-
-.game3 {
-	background-color:powderblue;
-}
+.box1 {	background-color: pink;}
+.box2 {	background-color: beige;}
+.box3 {	background-color:powderblue;}
 
 .round {
-	border-radius: 30px;
+	padding: 10px;
+	border-top: 5px solid white;
+	border-bottom: 30px solid white;
+}
+
+.round:hover {
+	cursor: pointer;
+	background-color: rgb(226, 226, 226);
+}
+
+.dev {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 15px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	.boxes {
+		flex-direction: column;
+	}
 }
