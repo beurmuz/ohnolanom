@@ -15,6 +15,21 @@ h1 {
 	font-size: 30px;
 }
 
+.png{
+	width: 300px;
+	height: 250px;
+}
+
+.StartBtn {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 35px;
+	grid-gap: 10px;
+	text-align: center;
+	font-family: 'Gaegu', cursive;
+	font-size: 30px;
+}
+
 .game1 {
 	background-color: pink;
 }
@@ -25,4 +40,8 @@ h1 {
 
 .game3 {
 	background-color:powderblue;
+}
+
+.round {
+	border-radius: 30px;
 }
