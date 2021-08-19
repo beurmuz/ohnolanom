@@ -203,25 +203,3 @@ function moveCells(direction) {
       moveCells('right');
     }
   });
-
-   // [#2 마우스 이벤트] ------------------------------------------------
-  let startCoord; // 시작 좌표를 저장할 변수 선언
-  window.addEventListener('mousedown', (event) => {
-    startCoord = [event.clientX, event.clientY];
-  });
-
-  window.addEventListener('mouseup', (event) => {
-    const endCoord = [event.clientX, event.clientY]; // 끝 좌표를 저장할 변수 선언 
-    const diffX = endCoord[0] - startCoord[0]; // x좌표의 변화율
-    const diffY = endCoord[1] - startCoord[1]; // y좌표의 변화율 
-    // 왼쪽과 오른쪽 영역은 diffx의 절댓값이 diffy의 절댓값보다 작음 (이러한 속성을 이용하고자 절댓값을 구하는 Math.abs()를 이용)
-    if (diffX < 0 && Math.abs(diffX) > Math.abs(diffY)) { // 왼쪽 영역은 diffx가 0보다 작음
-      moveCells('left');
-    } else if (diffX > 0 && Math.abs(diffX) > Math.abs(diffY)) { // 오른쪽 영역은 diffy가 0보다 큼
-      moveCells('right'); 
-    } else if (diffY > 0 && Math.abs(diffX) <= Math.abs(diffY)) { // 아래쪽의 경우
-      moveCells('down'); 
-    } else if (diffY < 0 && Math.abs(diffX) <= Math.abs(diffY)) { // 위쪽의 경우 
-      moveCells('up');
-    } 
-  });
