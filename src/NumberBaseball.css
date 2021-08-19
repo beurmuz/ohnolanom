@@ -1,3 +1,11 @@
+.oh {
+    display: grid;
+    place-items: center;
+    /*justify-content: center;
+    align-items: center;*/
+    min-height: 100vh;
+
+}
 
 .input {
     width:300px; 
@@ -19,3 +27,35 @@
     border-bottom: 5px solid darkgreen;
     border-radius: 5px;
 }
+
+.png {
+    width: 388px;
+    height: 500px;
+    background: url('./NumberBaseball.png');
+}
+
+.color1{
+    font-family: 'Permanent Marker', cursive;
+	font-size: 25px;
+    line-height: 35px;
+    color:rgb(208, 255, 177);
+}
+
+#logs {
+    position: absolute;
+    top: 180px;
+    left: 45px;
+}
+
+#strike {
+    position: absolute;
+    top: 180px;
+    left: 190px;
+}
+
+#ball {
+    position: absolute;
+    top: 180px;
+    left: 320px;
+}
+

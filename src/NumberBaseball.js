@@ -1,6 +1,8 @@
 const form_tag = document.querySelector('#form');
 const input_tag = document.querySelector('#input');
 const logs_tag = document.querySelector('#logs');
+const strike_tag = document.querySelector('#strike');
+const ball_tag = document.querySelector('#ball');
 
 // ------- 숫자 뽑기
 const numbers_arr = [1,2,3,4,5,6,7,8,9];
@@ -66,6 +68,8 @@ form_tag.addEventListener('submit', (event) => {
             }
         }
     } 
-    logs_tag.append(`${value}: ${strike} 스트라이크 ${ball} 볼`, document.createElement('br'));
+    logs_tag.append(`${value}`, document.createElement('br'));
+    strike_tag.append(`${strike}`, document.createElement('br'));
+    ball_tag.append(`${ball}`, document.createElement('br'));
     tries.push(value);
 });
