@@ -17,4 +17,4 @@
 ### Tech stack
 - HTML / CSS
 - JavaScript
-- Git / GitHub
+- Git
