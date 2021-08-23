@@ -19,41 +19,61 @@ button {
   width: 150px;
   background-color: beige;
 }
+
 .cell {
-    display: inline-block; position: relative; 
-    width: 150px; height: 150px;
-    background: 'yellow'; overflow: hidden;
-  }
-  /* [2] transition이 애니메이션 역할을 함  */
-  .ogu, .bomb {
-    width: 150px; height: 150px; bottom: 0; position: absolute; transition: bottom 1s;
-  }
-  .ogu {
-    background: url('./ogu.png') center center no-repeat;
-    background-size: 150px 150px;
-  }
-  .dead {
-    background: url('./dead_ogu.png') center center no-repeat;
-    background-size: 150px 150px;
-  }
-  .bomb {
-    background: url('./bomb.png') center center no-repeat;
-    background-size: 150px 150px;
-  }
-  .boom {
-    background: url('./explode.png') center center no-repeat;
-    background-size: 150px 150px;
-  }
-  .hidden {
-    bottom: -150px;
-  }
-  .hole {
-    width: 150px; height: 112px; position: absolute; bottom: 0;
-    background: url('./mole-hole.png') center center no-repeat;
-    background-size: 150px 112px;
-  }
-  .hole-front {
-    width: 150px; height: 22px; position: absolute; bottom: 0;
-    background: url('./mole-hole-front.png') center center no-repeat;
-    background-size: 150px 22px;
-  }
+  display: inline-block; position: relative; 
+  width: 150px; height: 150px;
+  background: 'yellow'; overflow: hidden;
+}
+
+#timer, #score, #start {
+  margin-top: 20px;
+  font-family: 'Jua', sans-serif;
+  font-size: 20px;
+}
+
+#start{
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+/* [2] transition이 애니메이션 역할을 함  */
+.ogu, .bomb {
+  width: 150px; height: 150px; bottom: 0; position: absolute; transition: bottom 1s;
+}
+
+.ogu {
+  background: url('./images/ogu.png') center center no-repeat;
+  background-size: 150px 150px;
+}
+
+.dead {
+  background: url('./images/dead_ogu.png') center center no-repeat;
+  background-size: 150px 150px;
+}
+
+.bomb {
+  background: url('./images/bomb.png') center center no-repeat;
+  background-size: 150px 150px;
+}
+
+.boom {
+  background: url('./images/explode.png') center center no-repeat;
+  background-size: 150px 150px;
+}
+
+.hidden {
+  bottom: -150px;
+}
+
+.hole {
+  width: 150px; height: 112px; position: absolute; bottom: 0;
+  background: url('./images/mole-hole.png') center center no-repeat;
+  background-size: 150px 112px;
+}
+
+.hole-front {
+  width: 150px; height: 22px; position: absolute; bottom: 0;
+  background: url('./images/mole-hole-front.png') center center no-repeat;
+  background-size: 150px 22px;
+}

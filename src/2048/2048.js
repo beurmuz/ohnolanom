@@ -75,7 +75,7 @@ function moveCells(direction) {
               const prevData = currentRow[currentRow.length - 1];
               if (prevData === cellData) { // 이전 값과 지금 값이 같으면
                 const score = parseInt($score.textContent);
-                $score.textContent = score + currentRow[currentRow.length - 1] * 2; // 점수 계산 
+                $score.textContent = `${score + currentRow[currentRow.length - 1] * 2}점`; // 점수 계산 
                 currentRow[currentRow.length - 1] *= -2; // 5) 두 값이 합쳐진 값에 -1을 곱해 4, 4, 8을 -4, 4, 8이 될 수 있도록 함 
               } else {
                 newData[i].push(cellData); 
@@ -105,7 +105,7 @@ function moveCells(direction) {
               const prevData = currentRow[currentRow.length - 1];
               if (prevData === rowData[3 - j]) {
                 const score = parseInt($score.textContent);
-                $score.textContent = score + currentRow[currentRow.length - 1] * 2;
+                $score.textContent = `${score + currentRow[currentRow.length - 1] * 2}점`;
                 currentRow[currentRow.length - 1] *= -2;
               } else {
                 newData[i].push(rowData[3 - j]);
@@ -132,7 +132,7 @@ function moveCells(direction) {
               const prevData = currentRow[currentRow.length - 1];
               if (prevData === cellData) {
                 const score = parseInt($score.textContent);
-                $score.textContent = score + currentRow[currentRow.length - 1] * 2;
+                $score.textContent = `${score + currentRow[currentRow.length - 1] * 2}점`;
                 currentRow[currentRow.length - 1] *= -2;
               } else {
                 newData[j].push(cellData);
@@ -159,7 +159,7 @@ function moveCells(direction) {
               const prevData = currentRow[currentRow.length - 1];
               if (prevData === data[3 - i][j]) {
                 const score = parseInt($score.textContent);
-                $score.textContent = score + currentRow[currentRow.length - 1] * 2; // 점수 계산
+                $score.textContent = `${score + currentRow[currentRow.length - 1] * 2}점`; // 점수 계산
                 currentRow[currentRow.length - 1] *= -2;
               } else {
                 newData[j].push(data[3 - i][j]); // 9) 아래로 정렬하는 방법은 j와 i가 바뀐 후, 3-i를 하면 됨
@@ -184,7 +184,7 @@ function moveCells(direction) {
         alert('축하합니다. 2048을 만들었습니다!');  
       }, 0);
     } else if (!data.flat().includes(0)) { // 빈 칸이 없으면 패배
-      alert(`패배했습니다... ${$score.textContent}점`);
+      alert(`패배했습니다... ${$score.textContent}`);
     } else {
       put2Cell(); // 10) 정렬 후 put2Cell함수를 넣어 무작위 위치에 2를 생성하게 함
       draw(); // 11) 새로 생성한 2가 그려짐 

@@ -15,15 +15,6 @@ h1 {
     min-height: 70vh;
 }
 
-.oh {
-    display: grid;
-    place-items: center;
-    /*justify-content: center;
-    align-items: center;*/
-    min-height: 100vh;
-
-}
-
 .input {
     width:300px; 
     height:10px;
@@ -48,31 +39,30 @@ h1 {
 .png {
     width: 388px;
     height: 500px;
-    background: url('./NumberBaseball.png');
+    background: url('./images/NumberBaseball.png');
 }
 
-.color1{
+span {
     font-family: 'Permanent Marker', cursive;
 	font-size: 25px;
     line-height: 35px;
     color:rgb(208, 255, 177);
+
+    white-space: nowrap;
 }
 
-#logs {
-    position: absolute;
-    top: 180px;
-    left: 45px;
+/*#logs {
+    top: 10px;
+    left: 40px;
 }
 
 #strike {
-    position: absolute;
-    top: 180px;
-    left: 190px;
+   
+    left: 80px;
 }
 
 #ball {
-    position: absolute;
-    top: 180px;
-    left: 320px;
+  
+    left: 100px;
 }
-
+*/

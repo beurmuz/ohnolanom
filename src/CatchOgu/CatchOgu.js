@@ -17,12 +17,12 @@ $start.addEventListener('click', () => { // 시작 버튼을 누를 때 작동�
 
   const timerId = setInterval(() => {
     time = (time * 10 - 1) / 10; // 소수점 계산 시 문제있음
-    $timer.textContent = time;
+    $timer.textContent = `${time}초`;
     if (time === 0) {
       clearInterval(timerId);
       clearInterval(tickId);
       setTimeout(() => {
-        alert(`게임 오버! 점수는${score}점`);
+        alert(`게임 오버! 점수는${score}`);
       }, 50);
     }
   }, 100);
@@ -61,7 +61,7 @@ $$cells.forEach(($cell, index) => {
   $cell.querySelector('.ogu').addEventListener('click', (event) => {
     if (!event.target.classList.contains('dead')) {
       score += 1;
-      $score.textContent = score;
+      $score.textContent = `${score}점`;
     }
     event.target.classList.add('dead');
     event.target.classList.add('hidden');
@@ -72,6 +72,10 @@ $$cells.forEach(($cell, index) => {
     }, 1000);
   });
   $cell.querySelector('.bomb').addEventListener('click', (event) => {
+    if (!event.target.classList.contains('dead')) {
+      score -= 1;
+      $score.textContent = `${score}점`;
+    }
     event.target.classList.add('boom');
     event.target.classList.add('hidden');
     clearTimeout(holes[index]); // 기존 내려가는 타이머 제거

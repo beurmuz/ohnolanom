@@ -30,6 +30,9 @@ h1 {
 
 #score { 
     user-select: none;
+    font-family: 'Jua', sans-serif;
+    font-size: 30px;
+    margin-top: 30px;
 }
 .color-2 { background-color: #eee4da; color: #776e65; }
 .color-4 { background-color: #eee1c9; color: #776e65; }
